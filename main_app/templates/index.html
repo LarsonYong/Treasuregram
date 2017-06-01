@@ -10,22 +10,55 @@
     <body>
         <nav class="navbar navbar-default navbar-static-top text-center">
           <a href="/">
-              <img src="{% static 'images/tres-logo.png' %}" alt="TreasureGran">
+              <img src="{% static 'images/tres-logo.png' %}" alt="TreasureGran" width="600" height="100">
           </a>
         </nav>
         <main class="container" role="main">
             <div class="treasure panel panel-default">
             {% for treasure in treasures %}
-                <div class="panel-heading">
-                    <h2 class="panel-title">{{ treasure.name }}</h2>
-                </div>
+                <div class="tracker panel panel-default {% cycle 'tracker-left' 'tracker-right' %}">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">{{ treasure.name }}</h2>
+                    </div>
                 <div class="panel-body">
-                    {{ treasure.material }}
-                    {% if treasure.value > 0 %}
-                        {{ treasure.value }}
-                    {% else %}
-                        {{ Unknown }}
-                    {% endif %}
+                    <div class="treasure-phote">
+                        <img scr="{{ treasure.img_url }}" height="200">
+                    </div>
+                    <table class="treasure-table">
+                        <tr>
+                            <th>
+                                <img src="{% static 'images/materials-icon.png' %}"  width="30" height="30">
+                                Material:
+                            </th>
+                            <td>{{ treasure.material }}</td>
+                        </tr>
+                    </table>
+
+                    <table class="treasure-table">
+                        <tr>
+                            <th>
+                                <img src="{% static 'images/value-icon.gif' %}" width="30" height="30">
+                                Value:
+                            </th>
+                            <td>
+                                {% if treasure.value > 0 %}
+                                    {{ treasure.value }}
+                                {% else %}
+                                    Unknown
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="treasure-table">
+                        <tr>
+                            <th>
+                                <img src="{% static 'images/location-icon.png' %}" width="30" height="30">
+                                Location:
+                            </th>
+                            <th>{{ treasure.location }}</th>
+                        </tr>
+                    </table>
+                </div>
                 </div>
             {% endfor %}
             </div>
