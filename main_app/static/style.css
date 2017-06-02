@@ -1,3 +1,16 @@
 h1 {
     color: green;
 }
+
+.treasure-phote {
+    display: inline-block;
+    float: left;
+}
+.treasure-table {
+    display:flex;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+.treasure-table2 {
+    display: inline;
+}
