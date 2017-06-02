@@ -10,6 +10,11 @@ def index(request):
     return render(request, 'index.html', {'treasures': treasures})
 
 
+def detail(request, treasure_id):
+    treasure = Treasure.objects.get(id=treasure_id)
+    return render(request, 'detail.html', {'treasure': treasure})
+
+
 # class Treasure:
 #     def __init__(self, name, value, material, location, img_url):
 #         self.name = name

@@ -1,16 +1,76 @@
 h1 {
     color: green;
 }
+h2 {
 
-.treasure-phote {
+}
+row {
+    float: right;
+}
+.social:hover{
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+}
+.social {
+    -webkit-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -webkit-transform-duration: 0.5s;
+    -moz-transform-duration: 0.5s;
+    -o-transform-duration: 0.5s;
+}
+
+#social-facebook:hover{
+    color: #3B5998;
+}
+#social-github:hover{
+    color: #d34836;
+}
+
+footer{
+    position:;
+    bottom:0;
+    width: 100%;
+}
+.treasure-table{
+    font-family: Lucida Sans Unicode,Verdana;
+    display:flex;
+    padding: 5px;
+    margin: 20px;
+}
+.treasure-photo-detail{
     display: inline-block;
     float: left;
+    padding-left: 30%;
+    margin-right: 20px;
 }
-.treasure-table {
+
+.panel-title-detail{
+    text-align:center;
+    font-family: Lucida Sans Unicode,Verdana;
+    font-size: 300%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.panel-title{
+    font-family: Lucida Sans Unicode,Verdana;
+}
+.treasure-photo-index{
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    width: 100%;
+    text-align:center;
+}
+.panel-title-index{
+    text-align:center;
+    font-family: Lucida Sans Unicode,Verdana;
+    width: 100%;
+}
+.treasure-table-detail{
+    font-family: Lucida Sans Unicode,Verdana;
     display:flex;
-    margin-top: 30px;
-    padding-left: 30px;
-}
-.treasure-table2 {
-    display: inline;
+    padding: 5px;
+    margin: 20px;
+    border-left: 40px;
 }

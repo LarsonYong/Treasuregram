@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="pannel-heading">
+    <h3 class="panel-title-detail">{{ treasure.name }}</h3>
+</div>
+<div class="panel-body">
+    <div class="treasure-photo-detail">
+        <img src="{{ treasure.img_url }}" height="200" width="200">
+    </div>
+    <table class="treasure-table-detail">
+        <tr>
+            <th>
+                <img src="{% static 'images/materials-icon.png' %}" width="30" height="30">
+                Materials
+            </th>
+            <td>: {{ treasure.material }}</td>
+        </tr>
+    </table>
+    <table class="treasure-table-detail">
+        <tr>
+            <th>
+                <img src="{% static 'images/value-icon.gif' %}" width="30" height="30">
+                Value
+            </th>
+            <td>
+                {% if treasure.value > 0 %}
+                     : {{ treasure.value }}
+                {% else %}
+                     : Unknown
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    <table class="treasure-table-detail">
+        <tr>
+            <th>
+                <img src="{% static 'images/location-icon.png' %}" width="30" height="30">
+                    Location
+            </th>
+            <th>: {{ treasure.location }}</th>
+        </tr>
+    </table>
+</div>
+{% endblock %}
+

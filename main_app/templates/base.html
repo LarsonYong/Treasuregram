@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'style.css' %}" rel="stylesheet" />
+        <meta charset="UTF-8">
+        <title>TreasureGram</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top text-center">
+          <a href="/">
+              <img src="{% static 'images/tres-logo.png' %}" alt="TreasureGran" width="600" height="100">
+          </a>
+        </nav>
+        <main class="container container--mw700">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </body>
+    <footer>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <div class="container">
+            <hr>
+                <div class="text-center center-block">
+                    <p class="txt-railway">-  Owner: Jack  -</p>
+                    <br />
+                        <a href="https://github.com/LarsonYong"><i id="social-github" class="fa fa-github-square fa-3x social"></i></a>
+                        <a href="https://www.facebook.com/yang.jianbo.1"><i id="social-facebook" class="fa fa-facebook-square fa-3x social"></i></a>
+                </div>
+                    <hr>
+        </div>
+        <br />
+    </footer>
+</html>
