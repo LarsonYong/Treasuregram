@@ -21,4 +21,17 @@
     {% endif %}
     {% endfor %}
 </div>
+<div class="treausre pannel pannel-default">
+    <div class="pannel-heading">
+        <h3 class="pannel-title"> Add Treasure</h3>
+    </div>
+    <div class="pennel-body">
+        <form action="post_url/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+
 {% endblock %}
