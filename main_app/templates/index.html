@@ -26,10 +26,17 @@
         <h3 class="pannel-title"> Add Treasure</h3>
     </div>
     <div class="pennel-body">
-        <form action="post_url/" method="post">
+        <form action="post_url/" method="post" class="add-form">
+        <table class="add-treasure-form">
             {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Submit" />
+            {% for field in form %}
+            <tr>
+                <td>{{ field.label_tag }}</td>
+                <td>{{ field }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+            <input type="submit" value="Submit" class="button"/>
         </form>
     </div>
 </div>
