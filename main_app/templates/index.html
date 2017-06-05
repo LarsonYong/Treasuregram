@@ -9,9 +9,16 @@
             <div class="treasure panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title-index">{{ treasure.name }}</h2>
+                    <a class="pannel-username" href="/user/{{treasure.user.username}}/">
+                        <h3 class="username">by: {{ treasure.user.username }}</h3>
+                    </a>
                 </div>
-                <div class="treasure-photo-index">
-                    <img src="{{ treasure.img_url }}" height="100">
+                <div class="pannel-body">
+                    <a href="/{{treasure.id}}/">
+                        <div class="treasure-photo-index">
+                            <img src="{{ treasure.image.url }}" height="100">
+                        </div>
+                    </a>
                 </div>
             </div>
         </a>
@@ -26,7 +33,7 @@
         <h3 class="pannel-title"> Add Treasure</h3>
     </div>
     <div class="pennel-body">
-        <form action="post_url/" method="post" class="add-form">
+        <form enctype="multipart/form-data"  action="post_url/" method="post" class="add-form">
         <table class="add-treasure-form">
             {% csrf_token %}
             {% for field in form %}

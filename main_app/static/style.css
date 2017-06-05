@@ -120,7 +120,7 @@ footer{
 .add-treasure-form{
     margin-left: 0;
 }
-.th, td{
+.123{
     color: #555;
     height: 30px;
     width: 100%;
@@ -131,7 +131,7 @@ footer{
     max-width: 500px;
     background: #F8F8F8;
     padding: 30px 30px 20px 30px;
-    font: 12px Arial, Helvetica, sans-serif;
+    font: 12px Lucida Sans Unicode,Verdana;
     color: #666;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -145,4 +145,40 @@ footer{
     width: 200px;
     margin-left:10px;
 
+}
+.username{
+    font: 15px Lucida Sans Unicode,Verdana;
+    padding: 0 0 0 0;
+    margin:auto;
+    text-align:center;
+}
+.loginbutton{
+    background-color: #9DC45F;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-border-radius: 5px;
+    border: none;
+    padding: 5px 15px 5px 15px;
+    margin-left: auto;
+    margin-top: 10px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+}
+.loginbutton:hover{
+    background-color:#80A24A;
+}
+.label-login{
+    float: left;
+    width: 200px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.label-login-tag{
+    width: 35%;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding: auto;
 }

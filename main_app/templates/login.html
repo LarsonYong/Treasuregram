@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<h1>Login</h1>
+<form method="post" action=".">
+   <table class="add-treasure-form">
+            {% csrf_token %}
+            {% for field in form %}
+            <tr>
+                <td class="label-login-tag">{{ field.label_tag }}</td>
+                <td class="label-login">{{ field }}</td>
+            </tr>
+            {% endfor %}
+   </table>
+    <input class="loginbutton"  type="submit" value="Submit" />
+</form>
+
+
+{% endblock %}
