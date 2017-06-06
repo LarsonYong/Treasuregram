@@ -1,12 +1,9 @@
 h1 {
-    color: green;
 }
 h2 {
 
 }
-row {
-    float: right;
-}
+
 .social:hover{
     -webkit-transform:scale(1.1);
     -moz-transform:scale(1.1);
@@ -43,12 +40,13 @@ footer{
     display: inline-block;
     float: left;
     padding-left: 30%;
-    margin-right: 20px;
+    margin-right: 50px;
+    padding-right: 30px;
 }
 
 .panel-title-detail{
     text-align:center;
-    font-family: Lucida Sans Unicode,Verdana;
+    font: 20px Lucida Sans Unicode,Verdana;
     font-size: 300%;
     margin-bottom: 40px;
     margin-top: 40px;
@@ -104,7 +102,7 @@ footer{
     -webkit-border-radius: 5px;
     -moz-border-radius:5px;
 }
-.pannel-title{
+.panel-title{
     font: 20px Lucida Sans Unicode,Verdana;
     padding: 20px 0px 20px 40px;
     display: block;
@@ -118,14 +116,12 @@ footer{
     border-bottom:1px solid #89AF4C;
 }
 .add-treasure-form{
-    margin-left: 0;
+    margin-left:0;
+    width: 375px;
 }
-.123{
-    color: #555;
-    height: 30px;
-    width: 100%;
-}
-.pannel-default{
+
+
+.panel-default{
     margin-left:auto;
     margin-right:auto;
     max-width: 500px;
@@ -159,7 +155,7 @@ footer{
     -moz-border-border-radius: 5px;
     border: none;
     padding: 5px 15px 5px 15px;
-    margin-left: auto;
+    margin-left: 60%;
     margin-top: 10px;
     color: #FFF;
     text-shadow: 1px 1px 1px #949494;
@@ -181,4 +177,53 @@ footer{
     padding-top: 10px;
     padding-bottom: 10px;
     padding: auto;
+}
+.img-detail{
+    left: 30px;
+    margin-right: auto;
+    padding-right: auto;
+}
+.logout-right {
+    position:fixed;
+    right:10px;
+    top:5px;
+}
+.login-right{
+    position:fixed;
+    right:10px;
+    top:5px
+}
+.user-right{
+    position:fixed;
+    right:80px;
+    top:5px;
+}
+.login-title{
+    font-family: Lucida Sans Unicode,Verdana;
+    margin:  auto;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+.login-form{
+    width: 80%;
+}
+.login-container{
+    position: relative;
+    width: 300px;
+    margin: 80px auto;
+    padding: 20px 40px 40px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.panel-login{
+    width: 500px;
+
+}
+.username-label .password-label{
+    font-family: Lucida Sans Unicode,Verdana;
+    padding-bottom: 10px;
+    margin: auto ;
 }

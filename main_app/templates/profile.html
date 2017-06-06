@@ -2,18 +2,29 @@
 {% load staticfiles %}
 
 {% block content %}
-<h1>{{ username }}</h1>
-    <div class="row">
-    {% for treausre in treasures %}
+<h1>{{ username }}</h1></br>
+
+<div class="row">
+    {% for treasure in treasures %}
         <div class="col-md-4">
-            <div class="treausre pannel pannel-default">
-                <a href="/{{ treasure.id}}/">
-                    <div class="pannel-heading">
-                        <h3 class="pannel-title">{{ treasure.name }}</h3>
+            <div class="treasure panel panel-default">
+                <a href="/{{treasure.id}}/">
+                    <div class="panel-heading">
+                        <h2 class="panel-title-index">{{ treasure.name }}</h2>
+                    </div>
+                    <div class="panel-body">
+                        <a href="/{{treasure.id}}/">
+                            <div class="treasure-photo-index">
+                                <img src="{{ treasure.image.url }}" height="100">
+                            </div>
+                        </a>
                     </div>
                 </a>
             </div>
         </div>
-    </div>
-
+    {% if forloop.counter|divisibleby:3 %}
+        </div><div class="row">
+    {% endif %}
+    {% endfor %}
 {% endblock %}
+</div>

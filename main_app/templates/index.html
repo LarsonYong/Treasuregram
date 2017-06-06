@@ -9,11 +9,11 @@
             <div class="treasure panel panel-default">
                 <div class="panel-heading">
                     <h2 class="panel-title-index">{{ treasure.name }}</h2>
-                    <a class="pannel-username" href="/user/{{treasure.user.username}}/">
+                    <a class="panel-username" href="/user/{{treasure.user.username}}/">
                         <h3 class="username">by: {{ treasure.user.username }}</h3>
                     </a>
                 </div>
-                <div class="pannel-body">
+                <div class="panel-body">
                     <a href="/{{treasure.id}}/">
                         <div class="treasure-photo-index">
                             <img src="{{ treasure.image.url }}" height="100">
@@ -28,11 +28,11 @@
     {% endif %}
     {% endfor %}
 </div>
-<div class="treausre pannel pannel-default">
-    <div class="pannel-heading">
-        <h3 class="pannel-title"> Add Treasure</h3>
+<div class="treausre panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> Add Treasure</h3>
     </div>
-    <div class="pennel-body">
+    <div class="penel-body">
         <form enctype="multipart/form-data"  action="post_url/" method="post" class="add-form">
         <table class="add-treasure-form">
             {% csrf_token %}
