@@ -14,10 +14,10 @@
               <img src="{% static 'images/tres-logo.png' %}" alt="TreasureGran" width="600" height="100">
           </a>
             {% if user.is_authenticated %}
-                <a class="navbar-text navbar-right" href="{% url 'profile' user.username %}">{{ user.username }}</a>
-                <a class="navbar-text navbar-right" href="{% url 'logout' %}">logout</a>
+                <a class="user-right" href="{% url 'profile' user.username %}">{{ user.username }}</a>
+                <a class="logout-right" href="{% url 'logout' %}">logout</a>
             {% else %}
-                <a class="navbar-text navbar-right" href="{% url 'login' %}">login</a>
+                <a class="login-right" href="{% url 'login' %}">login</a>
             {% endif %}
         </nav>
     <main>
