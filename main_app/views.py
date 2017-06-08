@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render
 from .models import Treasure
 from .forms import TreasureForm
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
 from .forms import TreasureForm, LoginForm
 from django.contrib.auth import authenticate,login,logout
@@ -55,6 +55,18 @@ def login_view(request):
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
 
+
+def like_treasure(request):
+    treasure_id = request.POST.get('treasure_id', None)
+
+    likes = 0
+    if (treasure_id):
+        treasure = Treasure.objects.get(id=int(treasure_id))
+        if treasure is not None:
+            likes = treasure.likes + 1
+            treasure.likes = likes
+            treasure.save()
+    return HttpResponse(likes)
 
 
 def logout_view(request):

@@ -20,6 +20,9 @@
                         </div>
                     </a>
                 </div>
+                <button id="likes" data-id="{{treasure.id}}" class="btn btn-mini btn-danger " type="button"><span class="glyphicon">&#xe005;</span>
+                    {% if treasure.likes > 0 %} {{ treasure.likes }} {% endif %}
+                </button>
             </div>
         </a>
     </div>
